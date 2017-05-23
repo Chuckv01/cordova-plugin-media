@@ -437,17 +437,6 @@ public class AudioHandler extends CordovaPlugin {
         };
 
     public void getAudioFocus() {
-        String TAG2 = "AudioHandler.getAudioFocus(): Error : ";
-
-        AudioManager am = (AudioManager) this.cordova.getActivity().getSystemService(Context.AUDIO_SERVICE);
-        int result = am.requestAudioFocus(focusChangeListener,
-                                          AudioManager.STREAM_ALARM,
-                                          AudioManager.AUDIOFOCUS_GAIN_TRANSIENT);
-
-        if (result != AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
-            LOG.e(TAG2,result + " instead of " + AudioManager.AUDIOFOCUS_REQUEST_GRANTED);
-        }
-
     }
 
 
